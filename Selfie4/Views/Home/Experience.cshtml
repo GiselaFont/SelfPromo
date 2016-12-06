@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using WebApplication2.Models
+@using WebApplication2.Data
+@using Selfie4.Data
+@model ExperienceViewModel
+
+<h3>Professional Experience</h3>
+@foreach (var job in Model.ProfessionalJob)
+{
+   
+        <div class="experience">
+       
+            <h4>@job.Name</h4>
+            @if (@job.EndDate.HasValue)
+            {
+                <div class="dates"> @job.StartDate.ToString("dd/MM/yyyy") - @job.EndDate.Value.ToString("dd/MM/yyyy") </div>
+            }
+            else
+            {
+                <div class="dates"> @job.StartDate.ToString("dd/MM/yyyy") - @DateTime.Now.ToString("dd/MM/yyyy") </div>
+            }
+            @if (!string.IsNullOrWhiteSpace(@job.JobTitle))
+            {
+                <div class="title">@job.JobTitle</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(job.JobDescription))
+            {
+                <div class="description">@job.JobDescription </div>
+            }
+            <div class="resposabilities">
+                <ul>
+                    @foreach (var h in job.Jobhighlight)
+                    {
+
+                        <li>@h.Description</li>
+
+                    }
+                </ul>
+            </div>
+
+
+        </div>
+
+}
+
+<h3> Activities </h3>
+@foreach (var job in Model.Activities)
+{
+    
+        <div class="experience">
+                <h4>@job.Name</h4>
+            @if (job.EndDate.HasValue)
+            {
+                <div class="dates"> @job.StartDate.ToString("dd/MM/yyyy") - @job.EndDate.Value.ToString("dd/MM/yyyy") </div>
+            }
+            else
+            {
+                <div class="dates"> @job.StartDate.ToString("dd/MM/yyyy") - @DateTime.Now.ToString("dd/MM/yyyy") </div>
+            }
+            @if(!string.IsNullOrWhiteSpace(@job.JobTitle))
+            {
+                <div class="title">@job.JobTitle</div>
+            }
+            @if(!string.IsNullOrWhiteSpace(job.JobDescription))
+            {
+                <div class="description">@job.JobDescription</div>
+            }
+
+        </div>
+}

@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Gisela Font - @ViewBag.Title </title>
+    <link href="~/Content/selfie.css" rel="stylesheet" type="text/css" />
+    <link rel="sylesheet" type="text/css" href="~/Content/bootstrap.css" />
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.js"></script>
+    <meta name="viewport" content="width=device-width" />
+</head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>Gisela Font</h1>
+                <h2>@ViewBag.Title</h2>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="~/Home/Index">Home</a></li>
+                    <li><a href="~/Home/Experience">Experience</a></li>
+                    <li><a href="~/Home/Education">Education</a></li>
+                    <li><a href="~/Home/Contact">Contact</a></li>
+
+                </ul>
+            </nav>
+            <main>
+                @RenderBody()
+            </main>
+            
+
+            <footer>
+                Copyright &copy; 2016, Gisela Font<br>
+                <b>Email:</b><a href="mailto:gfontsayeras@augusta.edu">gfontsayeras@augusta.edu</a><br>
+                <b>Profile:</b><a href="https://www.linkedin.com/in/gisela-font-sayeras-4228b9108?trk=nav_responsive_tab_profile_pic" target="_blank">LinkedIn</a>
+                <div id="table">
+                    @if (true)
+                    {
+
+                        <table>
+                            <tr>
+                                <td>Browser Name</td>
+                                <td>@Request.Browser.Type</td>
+                            </tr>
+                            <tr>
+                                <td>Browser Version</td>
+                                <td>@Request.Browser.Version</td>
+                            </tr>
+                            <tr>
+                                <td>HTTP method</td>
+                                <td>@Request.HttpMethod</td>
+                            </tr>
+                            <tr>
+                                <td>Signed In</td>
+                                <td>@Request.IsAuthenticated</td>
+                            </tr>
+                            @if (Request.IsAuthenticated)
+                            {
+                                <tr>
+                                    <td>User Name</td>
+                                    <td>@Request.LogonUserIdentity.Name</td>
+                                </tr>
+
+                            }
+
+                            <tr>
+                                <td>Client IP Address</td>
+                                <td>@Request.UserHostAddress</td>
+                            </tr>
+                        </table>
+                    }
+                    @RenderSection("Scripts", false)
+                </div>
+
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,203 @@
+/* COLOR SCHEME: Granny Smith Apple */
+
+header {
+	color: #193441; 
+	background-color: #91AA9D;
+	background-image: url("../Images/header.png");
+	background-position: right;
+	background-repeat: no-repeat;
+	border-radius: 10px 10px 0 0;
+}
+
+nav {
+	color: #193441; 
+	background-color: #D1DBBD;
+	padding: 5px 10px;
+	font-size: 14pt;
+	font-weight: bold;
+	text-decoration: none;
+	box-shadow: 0 10px 5px -5px #3E606F;
+	position: relative;
+}
+
+nav a{
+	color: #193441;
+	text-decoration: none;
+}
+
+nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li{
+	display: inline;
+	margin-right: 10px;
+}
+
+nav a:hover{
+	border-top: 1px dashed #493F0B;
+	border-bottom: 1px dashed #493F0B;
+}
+
+main {
+	color: #193441; 
+	background-color: #FCFFF5;
+	padding: 10px;
+	z-index: 0;
+}
+
+main a{
+	color: #193441; 
+}
+
+footer {
+	color: #193441; 
+	background-color: #91AA9D;
+	padding: 5px 10px;
+	font-size: 10pt;
+	font-style: italic;
+	border-radius: 0 0 10px 10px;
+}
+
+footer a{
+	color: #193441; 
+}
+
+body{
+	font-family: Calibri, Helvetica, Arial, sans-serif;
+	color: #FCFFF5;
+	background-color: #193441;
+}
+
+h1{
+	margin: 0;
+	padding: 5px 10px;
+	font-size: 42pt;
+	line-height: 36pt;
+	font-weight: lighter;
+}
+
+h2{
+	margin: 0;
+	padding: 0px 10px 5px;
+	font-size: 18pt;
+	line-height: 22pt;
+	font-weight: lighter;
+	font-style: italic;
+}
+
+h3{
+	font-size: 24pt;
+	font-weight: lighter;
+	margin: 0;
+}
+
+.experience, .school {
+	border-left: 10px solid #193441;
+	border-top: 1px dashed #193441;
+	border-bottom: 1px dashed #193441;
+	border-right: 1px dashed #193441;
+	margin: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	overflow: auto;
+}
+
+.experience h4{
+	font-size: 18pt;
+	font-weight: lighter;
+	margin: 0;
+}
+
+.experience .title{
+	font-size: 12pt;
+	font-style: italic;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.experience .dates{
+	font-size: 12pt;
+	font-style: italic;
+	font-weight: bold;
+	float: right;
+}
+
+.experience .description{
+	font-size: 11pt;
+}
+
+.experience ul{
+	margin: 0;
+}
+
+.experience .responsabilities{
+	font-size: 10pt;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	-column-count: 2;
+}
+
+.details {
+	color: #FCFFF5;
+	background-color: #3E606F;
+	float: right;
+	padding: 5px 10px;
+}
+
+#wrapper{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+.school img{
+	float: left;
+}
+
+.school h3{
+	margin: 0 0 0 120px;
+}
+
+.school h4{
+	font-size: 14pt;
+	font-weight: lighter;
+	margin: 0 0 0 120px;
+}
+
+.school ul{
+	margin: 0 0 0 120px;
+}
+
+.picture img{
+	float: right;
+	padding: 0 10px 0 5px;
+	overflow: auto;
+}
+ header, section, footer, aside, nav, main, article, figure { 
+ 	display: block;
+}
+
+label{
+    display:block;
+    float:left;
+    width:150px;
+    font-weight:bold;
+
+}
+
+textarea{
+    height:75px;
+}
+
+form input, textarea, select{
+    display:block;
+    width:300px;
+    margin-bottom:5px;
+    margin-left:150px;
+}
